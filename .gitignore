@@ -1,0 +1,16 @@
+# Archive / unused assets
+_archive_unused_assets/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.claude/
+.gemini/
+.vscode/
+.idea/
+
+# Node (if applicable)
+node_modules/
