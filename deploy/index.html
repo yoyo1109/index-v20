@@ -106,6 +106,16 @@
       white-space: nowrap;
     }
 
+    .logo-img {
+      display: block;
+      height: 56px;
+      width: auto;
+    }
+
+    .logo-img-footer {
+      height: 84px;
+    }
+
     .nav-links {
       display: flex;
       gap: 24px;
@@ -308,8 +318,7 @@
     .moment,
     .origin-hero-visual,
     .process-card,
-    .ritual-card,
-    .waitlist-box {
+    .ritual-card {
       border: 1px solid var(--line);
       box-shadow: 0 18px 44px rgba(36,75,45,.07);
     }
@@ -533,6 +542,38 @@
       from { transform: scaleX(0); }
       to { transform: scaleX(1); }
     }
+
+    /* OG Matcha Hero 2026-10-23 update */
+.hero-film{width:100%;max-width:960px;margin:auto}
+.hero-film-copy{top:clamp(20px,3vw,36px);bottom:auto;right:auto;max-width:64%}
+.hero-film-copy strong{font-size:clamp(23px,3.1vw,40px);line-height:1.08;text-wrap:balance}
+.hero-film-copy p{font-size:clamp(12px,1.5vw,15px)}
+.hero-film-scene::before{background:linear-gradient(180deg,rgba(12,28,18,.58),rgba(12,28,18,.06) 55%,transparent)}
+.hero-film-scene::after{display:none}
+.hero-film-scene:nth-child(2)>img{object-position:60% center}
+.hero-film-scene:nth-child(4)>img{object-position:59% center}
+.hero-film-scene:nth-child(6)>img{object-position:66% center}
+.hero-film-scene:nth-child(6) .hero-film-copy{max-width:53%}
+@media(max-width:520px){
+ .hero-film{border-radius:16px;aspect-ratio:4/5}
+ .hero-film-copy{left:18px;top:22px;max-width:83%}
+ .hero-film-copy strong{font-size:27px}
+ .hero-film-copy p{font-size:12px;max-width:240px}
+ .hero-film-scene:nth-child(2)>img{object-position:62% center}
+ .hero-film-scene:nth-child(3)>img{object-position:61% center}
+ .hero-film-scene:nth-child(4)>img{object-position:63% center}
+ .hero-film-scene:nth-child(5)>img{object-position:67% center}
+ .hero-film-scene:nth-child(6)>img{object-position:65% center}
+ .hero-film-scene:nth-child(6) .hero-film-copy{max-width:87%}
+ .hero-film-copy span{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-film *, .hero-film *::before,.hero-film *::after{animation:none!important}
+ .hero-film-scene{opacity:0}.hero-film-scene:nth-child(6){opacity:1}
+ .hero-film-scene>img{transform:none}
+}
+
+
 
     .section-head {
       max-width: 1080px;
@@ -1077,50 +1118,12 @@
     .waitlist {
       background: var(--ink);
       color: white;
+      text-align: center;
     }
 
-    .waitlist .lead {
-      color: rgba(255,255,255,.72);
-    }
-
-    .waitlist-box {
-      margin-top: 34px;
-      background: rgba(255,255,255,.08);
-      border-color: rgba(255,255,255,.16);
-      border-radius: 22px;
-      padding: 28px;
-      max-width: 760px;
-    }
-
-    .waitlist-form {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-    }
-
-    .waitlist-form input {
-      min-height: 54px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.22);
-      background: rgba(255,255,255,.12);
-      color: white;
-      padding: 0 20px;
-      outline: none;
-    }
-
-    .waitlist-form input::placeholder {
-      color: rgba(255,255,255,.58);
-    }
-
-    .waitlist-form button[disabled] {
-      opacity: .65;
-      cursor: progress;
-    }
-
-    .form-message {
-      margin: 14px 0 0;
-      color: #d8ef9b;
-      min-height: 22px;
+    .waitlist .btn.primary {
+      background: var(--matcha);
+      color: var(--deep);
     }
 
     footer {
@@ -1182,14 +1185,6 @@
 
       .proof-bar span {
         padding: 8px 10px;
-      }
-
-      .hero-film {
-        aspect-ratio: 16 / 9;
-      }
-
-      .hero-film-copy strong {
-        font-size: 40px;
       }
     }
 
@@ -1257,8 +1252,7 @@
       .photo-grid,
       .origin-standard-layout,
       .ritual-grid,
-      .philosophy-layout,
-      .waitlist-form {
+      .philosophy-layout {
         grid-template-columns: 1fr;
       }
 
@@ -1271,10 +1265,6 @@
       .formula-visual img {
         height: auto;
         min-height: 0;
-      }
-
-      .hero-film {
-        aspect-ratio: 16 / 9;
       }
 
       .moment { min-height: 420px; }
@@ -1316,39 +1306,6 @@
         padding: 104px 20px 48px;
       }
 
-      .hero-film {
-        aspect-ratio: 4 / 5;
-        border-radius: 18px;
-      }
-
-      .hero-film-montage {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-      }
-
-      .hero-film-copy {
-        left: 20px;
-        right: 20px;
-        bottom: 24px;
-      }
-
-      .hero-film-copy strong {
-        font-size: 28px;
-      }
-
-      .hero-film-copy p {
-        font-size: 14px;
-        max-width: 280px;
-      }
-
-      .hero-film-product {
-        display: none;
-      }
-
-      .waitlist-box {
-        padding: 20px;
-      }
-
       .formula-grid {
         grid-template-columns: 1fr;
       }
@@ -1358,7 +1315,7 @@
 
 <body>
   <nav class="nav" aria-label="Primary navigation">
-    <a class="logo" href="#top">Origreen</a>
+    <a class="logo" href="#top"><img class="logo-img" src="assets/logo.png" alt="Origreen" width="269" height="240"></a>
     <div class="nav-links">
       <a href="#why">Why OG</a>
       <a href="#formula">Formula</a>
@@ -1367,7 +1324,7 @@
       <a href="#faq">FAQ</a>
     </div>
     <div class="nav-actions">
-      <a class="nav-cta" href="#waitlist">Join the First Batch</a>
+      <a class="nav-cta" href="https://www.amazon.com/dp/B0HCL88TWN?th=1" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
     </div>
   </nav>
@@ -1391,7 +1348,7 @@
         </p>
         <!-- Internal compliance reminder: final label claims must be reviewed against final formula and documentation before launch. -->
         <div class="actions">
-          <a class="btn primary" href="#waitlist">Join the First Batch</a>
+          <a class="btn primary" href="https://www.amazon.com/dp/B0HCL88TWN?th=1" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
           <a class="btn secondary" href="#why">See Why OG</a>
         </div>
         <div class="proof-bar" aria-label="Product highlights">
@@ -1403,15 +1360,15 @@
       </div>
 
       <div>
-        <div class="hero-film" aria-label="Origreen OG Matcha lifestyle launch ad animation">
+        <div class="hero-film" id="og-hero-film" aria-label="Origreen OG Matcha 30-second lifestyle animation">
           <div class="hero-film-scene">
             <div class="hero-film-montage">
-              <img src="assets/img_01_0a0d2c87.png" alt="">
-              <img src="assets/img_02_9078cf85.png" alt="">
-              <img src="assets/img_03_241dad1c.png" alt="">
-              <img src="assets/img_04_d7684476.png" alt="">
-              <img src="assets/img_05_9078cf85.png" alt="">
-              <img src="assets/img_06_2e8dc2a7.png" alt="">
+              <img src="assets/morning.webp" alt="">
+              <img src="assets/office.webp" alt="">
+              <img src="assets/travel.webp" alt="">
+              <img src="assets/gym.webp" alt="">
+              <img src="assets/latte.webp" alt="">
+              <img src="assets/hero.webp" alt="">
             </div>
             <div class="hero-film-copy">
               <span>Origreen OG Matcha</span>
@@ -1420,7 +1377,7 @@
           </div>
 
           <div class="hero-film-scene">
-            <img src="assets/img_01_0a0d2c87.png" alt="">
+            <img src="assets/morning.webp" alt="">
             <div class="hero-film-copy">
               <span>Morning / Commute</span>
               <strong>Shake into milk. Take it with you.</strong>
@@ -1429,7 +1386,7 @@
           </div>
 
           <div class="hero-film-scene">
-            <img src="assets/img_02_9078cf85.png" alt="">
+            <img src="assets/office.webp" alt="">
             <div class="hero-film-copy">
               <span>Office Afternoon</span>
               <strong>An easier afternoon reset.</strong>
@@ -1438,7 +1395,7 @@
           </div>
 
           <div class="hero-film-scene">
-            <img src="assets/img_04_d7684476.png" alt="">
+            <img src="assets/gym.webp" alt="">
             <div class="hero-film-copy">
               <span>Active Routine</span>
               <strong>Shake. Sip. Keep moving.</strong>
@@ -1447,7 +1404,7 @@
           </div>
 
           <div class="hero-film-scene">
-            <img src="assets/img_07_80f3b262.png" alt="">
+            <img src="assets/study.webp" alt="">
             <div class="hero-film-copy">
               <span>Study / Focus</span>
               <strong>Pause. Reset. Return to focus.</strong>
@@ -1456,14 +1413,11 @@
           </div>
 
           <div class="hero-film-scene">
-            <img src="assets/img_06_2e8dc2a7.png" alt="">
+            <img src="assets/hero.webp" alt="">
             <div class="hero-film-copy">
               <span>OG Matcha</span>
               <strong>Functional matcha for calm focus.</strong>
               <p>Shake, stir, and go.</p>
-            </div>
-            <div class="hero-film-product">
-              <img src="assets/img_08_207242b6.png" alt="">
             </div>
           </div>
 
@@ -1862,29 +1816,13 @@
     </section>
 
     <section class="waitlist" id="waitlist">
-      <div class="section-head">
-        <span class="kicker">Launch Waitlist</span>
-        <h2>Join the first batch.</h2>
-        <p class="lead">
-          Join the first batch for early access to our launch, product updates, and first-release
-          availability before wider release.
-        </p>
-      </div>
-
-      <div class="waitlist-box">
-        <!-- Internal launch task: replace the Formspree placeholder action URL with the real waitlist endpoint before launch. -->
-        <form class="waitlist-form" id="waitlistForm" method="POST" action="https://formspree.io/f/REPLACE_WITH_FORM_ID">
-          <input id="emailInput" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
-          <button class="btn primary" id="waitlistButton" type="submit">Join the First Batch</button>
-        </form>
-        <p class="form-message" id="formMessage" aria-live="polite"></p>
-      </div>
+      <a class="btn primary" href="https://www.amazon.com/dp/B0HCL88TWN?th=1" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
     </section>
   </main>
 
   <footer>
     <div>
-      <div class="logo" style="color:white">Origreen</div>
+      <div class="logo"><img class="logo-img logo-img-footer" src="assets/logo-white.png" alt="Origreen" width="269" height="240"></div>
       <p>Functional matcha for calm focus.</p>
     </div>
     <div class="footer-links" aria-label="Footer navigation">
@@ -1926,55 +1864,6 @@
         const isOpen = item.classList.toggle("open");
         button.setAttribute("aria-expanded", String(isOpen));
       });
-    });
-
-    const form = document.getElementById("waitlistForm");
-    const emailInput = document.getElementById("emailInput");
-    const formMessage = document.getElementById("formMessage");
-    const waitlistButton = document.getElementById("waitlistButton");
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      if (!emailInput.checkValidity()) {
-        formMessage.textContent = "Please enter a valid email address.";
-        emailInput.focus();
-        return;
-      }
-
-      const endpoint = form.getAttribute("action");
-      const isPlaceholder = endpoint.includes("REPLACE_WITH_FORM_ID");
-
-      if (isPlaceholder) {
-        formMessage.textContent = "The waitlist form endpoint still needs to be connected before launch.";
-        return;
-      }
-
-      waitlistButton.disabled = true;
-      waitlistButton.textContent = "Joining...";
-      formMessage.textContent = "";
-
-      try {
-        const response = await fetch(endpoint, {
-          method: "POST",
-          body: new FormData(form),
-          headers: {
-            "Accept": "application/json"
-          }
-        });
-
-        if (!response.ok) {
-          throw new Error("Form submission failed");
-        }
-
-        formMessage.textContent = "Thank you. You are on the first-batch list.";
-        form.reset();
-      } catch (error) {
-        formMessage.textContent = "Something went wrong. Please try again in a moment.";
-      } finally {
-        waitlistButton.disabled = false;
-        waitlistButton.textContent = "Join the First Batch";
-      }
     });
   </script>
 </body>
