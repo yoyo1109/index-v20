@@ -19,3 +19,8 @@ node_modules/
 *.html
 !deploy/index.html
 
+
+# Local work folders (previews, audits, extracted images) - not part of the deployed site
+og-matcha-hero-*/
+preview-hero-*/
+package-audit-*/
